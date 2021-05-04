@@ -5,8 +5,8 @@ $(document).ready(function() {
     const experienceAnswer = parseInt($("input:radio[name=experience]:checked").val());
     const foodAnswer = parseInt($("input:radio[name=food]:checked").val());
     const colorAnswer = parseInt($("input:radio[name=color]:checked").val());
+    const answerTotal = interestAnswer + difficultyAnswer + experienceAnswer + foodAnswer + colorAnswer;
 
-    
     event.preventDefault();
   });
 });
