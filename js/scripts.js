@@ -7,6 +7,8 @@ $(document).ready(function() {
     const colorAnswer = parseInt($("input:radio[name=color]:checked").val());
     const answerTotal = interestAnswer + difficultyAnswer + experienceAnswer + foodAnswer + colorAnswer;
 
+    $("form#quiz").hide();
+
     if(answerTotal === 5) {
       $("#javascript").show().siblings().hide();
     } else if(answerTotal > 5 && answerTotal <= 10) {
