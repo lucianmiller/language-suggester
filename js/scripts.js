@@ -7,6 +7,16 @@ $(document).ready(function() {
     const colorAnswer = parseInt($("input:radio[name=color]:checked").val());
     const answerTotal = interestAnswer + difficultyAnswer + experienceAnswer + foodAnswer + colorAnswer;
 
+    if(answerTotal === 5) {
+      $("#javascript").show().siblings().hide();
+    } else if(answerTotal > 5 && answerTotal <= 10) {
+      $("#css").show().siblings().hide();
+    } else if(answerTotal > 10 && answerTotal <=15) {
+      $("#html").show().siblings().hide();
+    } else {
+      $("#error").show().siblings().hide();
+    }
+
     event.preventDefault();
   });
 });
